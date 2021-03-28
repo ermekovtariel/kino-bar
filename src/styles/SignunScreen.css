@@ -1,0 +1,46 @@
+.signunScreen {
+  max-width: 300px;
+  padding: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.signunScreen > form {
+  display: grid;
+  flex-direction: column;
+}
+.signunScreen > form > h1 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.signunScreen > form > h4 {
+  text-align: left;
+  margin-top: 30px;
+}
+.signunScreen__gray {
+  color: gray;
+}
+
+.signunScreen__link:hover {
+  color: #e50914;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.signunScreen > form > input {
+  outline-width: 0;
+  height: 40px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+}
+.signunScreen > form > button {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #e50914;
+  border: none;
+  margin-top: 20px;
+}

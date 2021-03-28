@@ -1,5 +1,6 @@
 import React from "react";
-import {requests, axios} from "../assets";
+import axios from "../assets/axios";
+import requests from "../assets/requests";
 import "../styles/Banner.css";
 
 function Banner() {
@@ -10,7 +11,7 @@ function Banner() {
       const request = await axios.get(requests.fetchNewflixOriginals);
       setMovie(
         request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
+        Math.floor(Math.random() * request.data.results.length - 1)
         ]
       );
     }
@@ -47,7 +48,7 @@ function Banner() {
         <h1 className="banner__description">{truncate(movie?.overview, 150)}</h1>
       </div>
       <div>
-          <div className="banner--fadeBottom"></div>
+        <div className="banner--fadeBottom"></div>
       </div>
     </header>
   );
