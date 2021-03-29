@@ -12,10 +12,10 @@ import { login, logout, selectUser } from "./redux/usersDate/userSlice";
 import OpenedCinema from "./pages/OpenedCinema";
 
 function App() {
-  const user = selectUser
+  const user = useSelector(selectUser)
   const dispatch = useDispatch()
   //https://www.youtube.com/watch?v=DStFGe6Hd2c&list=LL&index=3&ab_channel=SonnySangha
-  //1:46:226
+  //1:46:26
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(
       userAuth => {
@@ -24,7 +24,8 @@ function App() {
             login({
               uid: userAuth.uid,
               email: userAuth.email,
-            }))
+            })
+          )
         } else {
           //Logged out
           dispatch(logout)
