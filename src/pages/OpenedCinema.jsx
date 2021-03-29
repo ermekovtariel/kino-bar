@@ -4,16 +4,19 @@ import Banner from '../components/Banner';
 import requests from '../assets/requests';
 import Nav from '../components/Nav';
 
+
 function OpenedCinema() {
+  
+  
   return (
     <>
       <Nav />
       <Banner />
-      <Row
-        title='NETFLIX Originals'
-        fetchUrl={requests.fetchNewflixOriginals}
-        isLargeRow
-      />
+      <Row title='NETFLIX Originals' fetchUrl={requests.fetchNewflixOriginals} isLargeRow />        
+
+
+
+
       <Row title='Top Rated' fetchUrl={requests.fetchTopRated} isLargeRow />
       <Row title='Action Movies' fetchUrl={requests.fetchActionsMovies} isLargeRow />
       <Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} isLargeRow />

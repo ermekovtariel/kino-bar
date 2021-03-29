@@ -31,7 +31,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     if (trailerUrl) {
       setTrailerUrl('')
     } else {
-      movieTrailer(movie?.name || " ").then(url => {
+      movieTrailer(movie?.name || movie?.original_title).then(url => {
         const urlParams = new URLSearchParams(new URL(url).search)
         setTrailerUrl(urlParams.get('v'))
       }).catch(error => console.log(error))
@@ -70,21 +70,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
         ))}
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      {/* {movies.map(movie => (<div class="fake-player"
-        theme="london"
-        film={movie.name}
-        year={movie.release_date}
-        preview_video=""
-        preview_image=""
-        width="100%"
-        height="56%"
-        duration=""
-        playlist="0"
-        season="last"
-        episode="last"
-        skip_video="0"
-        hide_name="0"
-      ></div>))} */}
     </div>
   );
 }
